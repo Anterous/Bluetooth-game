@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ari.bt_ttt_app.BT_TTT_names"
+    android:background="#597fb1">
+
+    <TextView
+        android:id="@+id/text"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Text" />
+
+    <Button
+        android:id="@+id/turnOn"
+        android:background="#3954a6"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/turnOff"
+        android:layout_toEndOf="@+id/turnOff"
+        android:text="@string/on" />
+
+    <Button
+        android:id="@+id/turnOff"
+        android:background="#3954a6"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/paired"
+        android:layout_toEndOf="@+id/paired"
+        android:text="@string/off" />
+
+    <Button
+        android:id="@+id/paired"
+        android:background="#3954a6"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/text"
+        android:layout_marginBottom="10dp"
+        android:text="@string/List" />
+
+    <Button
+        android:id="@+id/search"
+        android:background="#3954a6"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listView1"
+        android:layout_alignStart="@+id/text"
+        android:text="@string/Find" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:textColor="#ffffff"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/turnOn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonClient"
+        android:background="#3954a6"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonServer"
+        android:layout_toEndOf="@+id/buttonServer"
+        android:onClick="client"
+        android:text="Client" />
+
+    <Button
+        android:id="@+id/buttonServer"
+        android:background="#3954a6"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text"
+        android:layout_below="@+id/text"
+        android:onClick="server"
+        android:text="Server" />
+
+</RelativeLayout>
